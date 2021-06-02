@@ -41,7 +41,7 @@ export const App = () => {
           </div>
             <div className="picture">
                 <img className="dogPicture" src={ dogUrl } alt="picture of gog" /><br/>
-                <button className="button" onClick={() => Reload()}>画像変更</button>
+                <button className="button" onClick={() => Reload()}>画像を変更</button>
             </div>
         </div>
         <div className="line"></div>
