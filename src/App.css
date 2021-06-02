@@ -1,0 +1,56 @@
+body{
+    margin: 0%;
+}
+
+header{
+    background-color: rgb(189, 189, 189);
+    text-align: center;
+    margin: 0%;
+}
+header > h1{
+    background-color: rgb(189, 189, 189);
+    text-align: center;
+    margin: 0%;
+}
+
+.line{
+    border-bottom: 2px solid gray;
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    overflow: hidden;
+}
+
+.description{
+    color: rgb(100, 100, 100);
+    float:left;
+    width: 50%;
+    text-align: center;
+}
+
+.picture{
+    float:right;
+    text-align: right;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.dogPicture{
+    width: 75%;
+    height: auto;
+    max-height: 400px;
+}
+
+.button{
+    line-height: 32px;
+    border-radius: 4px;
+    border: none;
+    /* min-width: 64px; */
+    padding: 0 16px;
+    color: white;
+    background: rgb(0, 68, 255);
+}
+
