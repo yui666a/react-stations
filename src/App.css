@@ -25,10 +25,18 @@ header > h1{
 }
 
 .description{
-    color: rgb(100, 100, 100);
     float:left;
     width: 50%;
-    text-align: center;
+    height: 15em;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description > p{
+    color: rgb(100, 100, 100);
+    font-size: large;
+
 }
 
 .picture{
