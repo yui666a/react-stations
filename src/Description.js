@@ -26,10 +26,8 @@ export const Description = () => {
   } else {
     return (
       <div className="main">
-        <div className="description">
-          <p>犬の画像を表示</p>
-        </div>
-        <div className="picture">
+        <div className="description">犬の画像を表示</div>
+        <div className="detail">
           <DogImage url={dogUrl} /><br />
           <button className="button" onClick={reload}>画像を変更</button>
           {/* <button className="button" onClick={() => reload()}>画像を変更</button> */}

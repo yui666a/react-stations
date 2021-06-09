@@ -3,54 +3,18 @@ body{
 }
 
 header{
-    background-color: rgb(189, 189, 189);
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+
+    background-color: #bbb;
     text-align: center;
     margin: 0%;
-}
-header > h1{
-    background-color: rgb(189, 189, 189);
-    text-align: center;
-    margin: 0%;
+    height: 10vh;
 }
 
 .line{
     border-bottom: 2px solid gray;
-}
-
-.main {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80vw;
-    overflow: hidden;
-}
-
-.description{
-    float:left;
-    width: 50%;
-    height: 15em;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.description > p{
-    color: rgb(100, 100, 100);
-    font-size: large;
-
-}
-
-.picture{
-    float:right;
-    text-align: right;
-    /* margin: 0 auto; */
-    width: 50%;
-}
-
-.dogPicture{
-    width: 75%;
-    height: auto;
-    max-height: 400px;
 }
 
 .button{
@@ -61,5 +25,83 @@ header > h1{
     padding: 0 16px;
     color: white;
     background: rgb(0, 68, 255);
+    font-size: 1em; /* 32px */
+    margin: 3px;
 }
 
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+
+    height: 70vh;
+    align-items: center;
+}
+
+.description {
+    width: 60vw;
+    align-self: auto;
+    text-align: center;
+    font-size: 2em; /* 32px */
+}
+
+.detail {
+    width: 40vw;
+    align-self: auto;
+}
+
+.dogPicture {
+    max-height: 60vh;
+    min-height: 60vh;
+    width: 100%;
+}
+
+.breeds-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin: 3px;
+}
+.breeds-select-label {
+    margin: 3px;
+}
+.breeds-select-dropdown {
+    height: 32px;
+    font-size: 1em;
+    margin: 3px;
+}
+.doglist-container {
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw;
+    grid-template-rows: 33vw 33vw;
+    grid-gap: 0.5vw;
+    grid-template-areas:
+        "grid-img grid-img grid-img"
+        "grid-img grid-img grid-img"
+        "grid-img grid-img grid-img"
+}
+
+
+/* なぜimgだけ外？ */
+img {
+    height: 33vw;
+    width: 33vw;
+}
+.grid-img {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 30%;
+}
+
+.grid-img img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
