@@ -30,6 +30,7 @@ header > h1{
     height: 15em;
     
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -42,7 +43,7 @@ header > h1{
 .picture{
     float:right;
     text-align: right;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     width: 50%;
 }
 
