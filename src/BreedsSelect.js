@@ -1,44 +1,37 @@
 // DO NOT DELETE
 import * as React from 'react'
 import { useState } from 'react'
-// import { Component } from 'react';
 
 export const BreedsSelect = props => {
-    // const [value, setValue] = useState('affenpinscher')
+    // fields
     const [select, setSelect] = useState('affenpinscher')
     const [showSelect, setShowSelect] = useState('affenpinscher')
-    // const [breed, setBreed] = useState(0)
+    const breeds = Array.from(props.breeds) //配列を保存 (なぜ必要か，よくわかってない)
 
-    const selectChange = e => {
-        setSelect(e.target.value)
-        // console.log('selectChange ' + e.target.value)
-  }
-
-  const showSelectChange = async e => {
-    new Promise(resolve => setShowSelect(select))
-    // console.log('showSelectChange ' + select)
-    props.callShowImgList(select)
+    // functions
+    const selectChange = selected => {
+        setSelect(selected.target.value)
     }
 
-    const breeds = Array.from(props.breeds) //よくわかってない
-    
+    const showSelectChange = async () => {
+        new Promise(
+            resolve => setShowSelect(select) //成功
+        )
+        props.callShowImgList(select)
+    }
 
     return (
         <div className="breeds-select">
-            <label className="breeds-select-label">Breeds List</label>
+            <label className="breeds-select-label">犬種リスト</label>
+            {/* 犬種1つ1つに対してkeyと表示名を設定 */}
             <select className="breeds-select-dropdown" onChange={selectChange}>
-                {breeds.map(x => (
-                <option key={x}>{x}</option>
+                {breeds.map(breed => (
+                    <option key={breed}>{breed}</option>
                 ))}
             </select>
 
-            {/* <button className="button" onClick={() => Reload()}>表示</button> */}
-            <button className="button"
-                value={showSelect}
-                onClick={showSelectChange}
-            >
-                表示
-            </button>
+            {/* <button className="button" value={showSelect} onClick={() => showSelectChange()}>表示</button> */}
+            <button className="button" value={showSelect} onClick={showSelectChange}>表示</button>
         </div>
   )
 }

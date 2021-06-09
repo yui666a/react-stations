@@ -1,6 +1,5 @@
 // DO NOT DELETE
 import * as React from 'react'
-// import { Component } from 'react';
 
 export const Header = props => {
   return (
